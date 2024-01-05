@@ -12,8 +12,10 @@ int main(int argc, const char * argv[]) {
     printf("Hello, World!\n");
     printf("Input the number!\n");
 
-    int i;
-    scanf("%n",&i);
-    printf("Number is d\n",i);
-    return 0;
+    int i=56;
+    scanf("%d",&i);
+    printf("Number is %d\n",i);
+    
+    
+    return 88;
 }
