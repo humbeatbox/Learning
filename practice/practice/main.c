@@ -8,74 +8,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    
-    
-    struct node{
-        int data;
-        struct node *next;
-    };
-    
-    struct node *head, *mid, *last;
-    head = malloc(sizeof(struct node));
-    mid = malloc(sizeof(struct node));
-    last = malloc(sizeof(struct node));
-    
-    head->data = 10;
-    mid->data = 20;
-    last->data = 30;
-    
-    head->next = mid;
-    mid->next = last;
-    last->next  = NULL;
-    
-    struct node *temp = head;
-    
-    
-    while(temp!=NULL){
-        printf("%d ",temp->data);
-        temp = temp->next;
-        
-    }
-    printf("\n") ;
-    
-    printf("End!!\n");
-    
-    return 88;
-}
-*/
-#include <stdio.h>
 void swap(int* px, int* py);
 void printArray(void);
-void ptrcal(void);
+void pointerExplain(void);
+void link_list(void);
+void showPointer(void);
+int main(void) {
+    // insert code here...
+    link_list();
+    pointerExplain();
+    printArray();
+    showPointer();
 
-int main(void){
-    /*
     int a=1, b=2;
     printf("a = %d, b = %d\n",a,b);
     swap(&a, &b);
-    printf("a = %d, b = %d\n\n\n",a,b);
-    */
-    //int pointer = 99;
-    //printf("number is %d ,address is %p or %p\n",pointer,pointer,&pointer);
-    /*
-    int i[3] = {1, 2, 3};
+    printf("a = %d, b = %d\n",a,b);
 
-    printf("i:     %p\n", i);
-    printf("&i[0]: %p\n", &i[0]);
-    
-    int  *ptr = NULL;
-     
-    printf("ptr 的地址是 %p\n", ptr  );
-    */
-    //printArray();
-    
-    //ptrcal();
+
+    return 0;
 }
+
+
 void swap(int* px, int* py) {
     int tmp = *px;
     *px = *py;
@@ -89,7 +43,8 @@ void printArray(void){
         printf("*(p + %d): %d\n", i, *(p+i));
     }
 }
-void ptrcal(void){
+void pointerExplain(void){
+
     int num1 = 5;
     int num2;
     int *p = NULL;
@@ -106,9 +61,10 @@ void ptrcal(void){
 }
 
 
-/*
+
 // Main
-int main(void) {
+void showPointer(void) {
+    printf("Show List Start!\n");
     int b = 2;
     int* pointer = &b;
     printf("變數 b 的值：%d\n", b);
@@ -121,6 +77,59 @@ int main(void) {
     printf("變數 b 的值：%d\n", b);
     printf("變數 pointer 的地址：%p\n", &pointer);
     printf("變數 b 的地址：%p\n", &b);
-    return 0;
+
+    printf("Show List End!\n");
+
 }
+
+
+void link_list(void){
+    printf("Link List Start!\n");
+    struct node{
+        int data;
+        struct node *next;
+    };
+
+    struct node *head, *mid, *last;
+    head = malloc(sizeof(struct node));
+    mid = malloc(sizeof(struct node));
+    last = malloc(sizeof(struct node));
+
+    head->data = 10;
+    mid->data = 20;
+    last->data = 30;
+
+    head->next = mid;
+    mid->next = last;
+    last->next  = NULL;
+
+    struct node *temp = head;
+
+    while(temp!=NULL){
+        printf("%d ",temp->data);
+        temp = temp->next;
+
+    }
+    printf("\n") ;
+
+    printf("Link List End!\n");
+}
+
+/*
+int a=1, b=2;
+printf("a = %d, b = %d\n",a,b);
+swap(&a, &b);
+printf("a = %d, b = %d\n\n\n",a,b);
+*/
+//int pointer = 99;
+//printf("number is %d ,address is %p or %p\n",pointer,pointer,&pointer);
+/*
+int i[3] = {1, 2, 3};
+
+printf("i:     %p\n", i);
+printf("&i[0]: %p\n", &i[0]);
+
+int  *ptr = NULL;
+
+printf("ptr 的地址是 %p\n", ptr  );
 */

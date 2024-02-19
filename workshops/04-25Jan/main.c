@@ -20,9 +20,29 @@
  *
  * */
 #include <stdio.h>
-int ASCI(void);
+//int ASCI(void);
 
+int main(void){
+    char c = 'A';
+    printf("%d, %c\n",c,c);
 
+    int a = 2;
+    printf("%d\n",++a);
+    a = 2;
+    printf("%d\n",a++);
+    printf("%d",a);
+
+    /*int loonies;
+    double cash;
+
+    printf("Loonies ? ");
+    scanf("%d", &loonies);
+    cash = loonies; // promotion
+    printf("Cash is $%.2lf\n", cash);
+*/
+    return 0;
+}
+/*
 
 int main(void) {
 
@@ -69,4 +89,4 @@ int ASCI(void){
 
 
 
-}
+}*/
