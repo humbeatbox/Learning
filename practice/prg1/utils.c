@@ -1,44 +1,35 @@
 //
-//  main.c
-//  practice
-//
-//  Created by Gary Chang on 2023-12-30.
+// Created by Gary Chang on 2024-02-19.
 //
 
-#include <stdio.h>
+#include "utils.h"
+#include "stdio.h"
 #include <stdlib.h>
 
-void swap(int* px, int* py);
-void printArray(void);
-void pointerExplain(void);
-void link_list(void);
-void showPointer(void);
-int main(void) {
-    // insert code here...
-    link_list();
-    pointerExplain();
-    printArray();
-    showPointer();
-
-    int a=1, b=2;
-    printf("a = %d, b = %d\n",a,b);
-    swap(&a, &b);
-    printf("a = %d, b = %d\n",a,b);
-
-
-    return 0;
+int getInt(void){
+    int ret = 0;
+    scanf("%d",&ret);
+    flushKey();
+    return ret;
 }
 
+void flushKey(void){
+    char ch;
+    do{
+        ch = getchar();
+    } while (ch != '\n');
+}
 
 void swap(int* px, int* py) {
     int tmp = *px;
     *px = *py;
     *py = tmp;
 }
+
 void printArray(void){
     int a[3] = {1, 2, 3};
     int* p = a;
-    
+
     for (int i=0; i<sizeof(a)/sizeof(a[0]); ++i) {
         printf("*(p + %d): %d\n", i, *(p+i));
     }
@@ -54,10 +45,10 @@ void pointerExplain(void){
     num2 = *p + 2; // num2 變成 (5+2) 7
     printf("num2 = *p + 2 =  %d\n",num2);
     num2 += *p;    // num2 變成 (7+5) 12
-    
+
     *p = num2;        // num1 從5變成 12
     (*p)++;           // num1 變成 (12++) 13
-    
+
 }
 
 
@@ -71,7 +62,7 @@ void showPointer(void) {
     printf("變數 b 的地址：%p\n", &b);
     printf("pointer 的值：%p\n", pointer);
     printf("\n"); //換行
-    
+
     *pointer = 100;
     printf("*pointer 的值：%d\n", *pointer);
     printf("變數 b 的值：%d\n", b);
@@ -114,22 +105,3 @@ void link_list(void){
 
     printf("Link List End!\n");
 }
-
-/*
-int a=1, b=2;
-printf("a = %d, b = %d\n",a,b);
-swap(&a, &b);
-printf("a = %d, b = %d\n\n\n",a,b);
-*/
-//int pointer = 99;
-//printf("number is %d ,address is %p or %p\n",pointer,pointer,&pointer);
-/*
-int i[3] = {1, 2, 3};
-
-printf("i:     %p\n", i);
-printf("&i[0]: %p\n", &i[0]);
-
-int  *ptr = NULL;
-
-printf("ptr 的地址是 %p\n", ptr  );
-*/
