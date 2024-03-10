@@ -4,6 +4,7 @@
 
 void countDice();
 void arraySearch();
+void arrayRangeSearch();
 int main() {
     srand(time(0));
     int counter[6] = {0};
@@ -16,7 +17,8 @@ int main() {
         printf("Times of Number %d is %d\n",j+1,counter[j]);
     }
     countDice();
-    arraySearch();
+    //arraySearch();
+    arrayRangeSearch();
     return 0;
 }
 
@@ -48,4 +50,27 @@ void arraySearch(){
         }
         printf("%d = %d\n",i,n[i-1]);
     }
+}
+
+void arrayRangeSearch(){
+    int n[10];
+    printf("Input 10 number:\n");
+    for (int i = 0; i <= 9; i++) {
+        printf("Number %d is :",i+1);
+        scanf("%d", &n[i]);
+    }
+     while(1){
+        int L,R;
+        printf("L R:");
+        scanf("%d%d",&L,&R);
+        if (L == 0 && R == 0)
+             break;
+        printf("Ans: ");
+        for (int i = 0; i < 10; i++) {
+            if(n[i]>=L && n[i]<=R){
+                printf("%d ",n[i]);
+            }
+        }
+        printf("\n");
+     }
 }
