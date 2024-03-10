@@ -57,17 +57,17 @@ void pointerExplain(void){
 void showPointer(void) {
     printf("Show List Start!\n");
     int b = 2;
-    int* pointer = &b;
-    printf("變數 b 的值：%d\n", b);
-    printf("變數 b 的地址：%p\n", &b);
-    printf("pointer 的值：%p\n", pointer);
+    int* pointer = &b;//set the value of pointer to the address of b
+    printf("the value of  b is：%d\n", b);
+    printf("the address of  b is：%p\n", &b);
+    printf("the value of pointer is：%p\n", pointer);//be like the address of b
     printf("\n"); //換行
 
-    *pointer = 100;
-    printf("*pointer 的值：%d\n", *pointer);
-    printf("變數 b 的值：%d\n", b);
-    printf("變數 pointer 的地址：%p\n", &pointer);
-    printf("變數 b 的地址：%p\n", &b);
+    *pointer = 100;//set the value of pointer to 100 (also means the variable of b)
+    printf("the value of *pointer is：%d\n", *pointer);//100
+    printf("the value of b is：%d\n", b); //100
+    printf("the address of variable \"pointer\" is：%p\n", &pointer); //the same address of b
+    printf("the address of variable \"b\" is：%p\n", &b);//
 
     printf("Show List End!\n");
 
@@ -105,3 +105,5 @@ void link_list(void){
 
     printf("Link List End!\n");
 }
+
+

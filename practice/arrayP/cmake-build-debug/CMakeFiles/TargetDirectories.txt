@@ -1,0 +1,3 @@
+/Users/garychang/Documents/GitHub/Learning/practice/arrayP/cmake-build-debug/CMakeFiles/arrayP.dir
+/Users/garychang/Documents/GitHub/Learning/practice/arrayP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/garychang/Documents/GitHub/Learning/practice/arrayP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
