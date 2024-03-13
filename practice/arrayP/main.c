@@ -5,21 +5,27 @@
 void countDice();
 void arraySearch();
 void arrayRangeSearch();
+void creatRandomNumber(int counter[],int index);
+
 int main() {
     srand(time(0));
     int counter[6] = {0};
+    creatRandomNumber(counter,6);
+    //countDice();
+    //arraySearch();
+    //arrayRangeSearch();
+    return 0;
+}
+void creatRandomNumber(int counter[],int index){
+
     for(int i = 1; i<=6000; ++i){
         int dice = rand() % 6+1;
         counter[dice-1]++;
     }
 
-    for (int j = 0; j < 6; ++j) {
+    for (int j = 0; j < index; ++j) {
         printf("Times of Number %d is %d\n",j+1,counter[j]);
     }
-    countDice();
-    //arraySearch();
-    arrayRangeSearch();
-    return 0;
 }
 
 void countDice(){
