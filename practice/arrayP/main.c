@@ -6,14 +6,16 @@ void countDice();
 void arraySearch();
 void arrayRangeSearch();
 void creatRandomNumber(int counter[],int index);
-
+void cRanUnrepeatNum();
 int main() {
     srand(time(0));
     int counter[6] = {0};
-    creatRandomNumber(counter,6);
+    cRanUnrepeatNum();
+    //creatRandomNumber(counter,6);
     //countDice();
     //arraySearch();
     //arrayRangeSearch();
+
     return 0;
 }
 void creatRandomNumber(int counter[],int index){
@@ -79,4 +81,12 @@ void arrayRangeSearch(){
         }
         printf("\n");
      }
+}
+
+void cRanUnrepeatNum(){
+    char str[50];
+    printf("input\n");
+    //scanf("%[^\n]",str);
+    scanf("%s",str);
+    printf("%s",str);
 }
