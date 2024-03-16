@@ -1,16 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "report.h"
+#include "strcuture.h"
+#include "utils.h"
+
 
 void countDice();
 void arraySearch();
 void arrayRangeSearch();
 void creatRandomNumber(int counter[],int index);
 void cRanUnrepeatNum();
+
 int main() {
-    srand(time(0));
-    int counter[6] = {0};
-    cRanUnrepeatNum();
+    struct student gary ;
+    gary = readStudentFile();
+    prnStudentInformation(gary);
+
+    struct student class1[10];
+
+//    gary.hight = getInt();
+//    printf("%d\n",gary.high);
+//    printf("%s\n",gary.name);
+
+
+    //srand(time(0));
+    //int counter[6] = {0};
+    //cRanUnrepeatNum();
     //creatRandomNumber(counter,6);
     //countDice();
     //arraySearch();

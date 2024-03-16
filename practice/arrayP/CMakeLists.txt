@@ -3,4 +3,10 @@ project(arrayP C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(arrayP main.c)
+add_executable(arrayP main.c
+        report.c
+        report.h
+        strcuture.c
+        strcuture.h
+        utils.c
+        utils.h)
